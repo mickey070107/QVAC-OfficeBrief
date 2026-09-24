@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>OfficeBrief — Local AI Meeting Assistant</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <div class="brand"><span class="logo">OB</span><div><b>OfficeBrief</b><small>Private local AI</small></div></div>
+    <span id="status" class="pill">QVAC • Ready</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">LOCAL MEETING INTELLIGENCE</p>
+      <h1>Turn messy meeting notes into an <span>actionable brief.</span></h1>
+      <p class="sub">Paste internal notes and let QVAC process them directly on this computer. Your notes are not sent to a cloud AI API.</p>
+    </section>
+
+    <section class="workspace">
+      <div class="card">
+        <div class="cardtop"><h2>Meeting notes</h2><button id="sample" class="ghost">Load sample</button></div>
+        <textarea id="notes" placeholder="Paste meeting notes here…
+
+Example:
+Client launch review. Priya will send the revised proposal by Friday. Arjun owns the dashboard QA. Marketing budget approved at ₹80,000. Next review is 2 October."></textarea>
+        <button id="generate" class="primary"><span>✦</span> Create meeting brief</button>
+        <p class="hint">First run may take longer while QVAC downloads the local model.</p>
+      </div>
+
+      <div class="card output">
+        <div class="cardtop"><h2>AI brief</h2><span id="local" class="local">● On-device</span></div>
+        <div id="result" class="result empty">Your summary, decisions and action items will appear here.</div>
+      </div>
+    </section>
+
+    <footer>
+      <span>QVAC SDK 0.19.1</span><span>•</span><span>loadModel + completion</span><span>•</span><span>Local inference</span>
+    </footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
